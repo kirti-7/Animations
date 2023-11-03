@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+    <style>
+        .img{
+            position: fixed;
+            top: 50%;
+            right: 14%;
+            transform: translateY(-50%);
+        }
+        img{
+            opacity: 0;
+            width: 440px;
+            animation: appearing 0.1s linear forwards;
+            animation-delay: 1.4s;
+        }
+        .img::after{
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: #272727;
+            position: absolute;
+            animation: rev-img 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes rev-img {
+            0%{
+                left: 0;
+                width: 0%;
+            }
+            50%{
+                width: 440px;
+                left: 0;
+            }
+            100%{
+                left: 440px;
+                width: 0;
+            }
+        }
+
+        @keyframes appearing {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="temp"></div>
+    <div class="first-block"></div>
+    <div class="second-block"></div>
+    <div class="loader">
+        <ul>
+            <li>L</li>
+            <li>O</li>
+            <li>A</li>
+            <li>D</li>
+            <li>I</li>
+            <li>N</li>
+            <li>G</li>
+        </ul>
+    </div>
+    <div class="third-block"></div>
+    <div class="menu">
+    </div>
+    <div class="logo">
+        <span>Explore</span>
+    </div>
+
+    <div class="content">
+        <div class="heading">
+            <span>Faroe Islands</span>
+        </div>
+        <div class="desc">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus nam, quasi aut nisi atque esse ea corrupti eveniet consequuntur necessitatibus repellat neque cumque facere dolores quidem nostrum distinctio mollitia ipsum?</p>
+        </div>
+        <div class="link">
+            <button type="button">VISIT NOW</button>
+        </div>
+    </div> -->
+    <div class="img">
+        <img src="./karina.jpg" alt="">
+    </div>
+    <!-- <div class="media">
+        <ul>
+            <li>F</li>
+            <li>I</li>
+            <li>T</li>
+        </ul>
+    </div>
+
+    <div class="watch">
+        Player
+    </div> -->
+
+
+
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            background: aqua;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation: containerAnime 2.8s ease-in-out;
+        }
+        .box{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation: boxAnime 2.8s ease-in-out;
+        }
+        .dropDown{
+            width: 100vw;
+            height: 100vh;
+            background-color: red;
+            position: absolute;
+            top: -100%;
+            animation: dropDown 3s 1.4s ease-in-out;
+            z-index: -100;
+        }
+        @keyframes containerAnime{
+            0%{
+                width: 200px;
+                height: 200px;
+                top: 50%;
+                left: 50%;
+            }
+            100%{  
+                width: 100vw;
+                height: 200px;
+                top: 10%;
+                left: 50%;   
+            }
+        }
+
+        @keyframes boxAnime {
+            0%{
+            }
+            100%{
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                top: 100%;
+                left: 5%;
+                transform: translate(-50%,-50%);
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes dropDown {
+             0%{
+            }
+            100%{
+                top: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <div class="container">
+        <div class="box">
+            
+        </div>
+    </div>
+    <div class="dropDown"></div>
+    
+</body>
+</html>

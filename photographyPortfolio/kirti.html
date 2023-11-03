@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Kirti</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        /* .left {
+            position: absolute;
+        background-image: url('./karina.jpg');
+        background: gray;
+        left: 0%;
+        width: 0%;
+        height: 100%;
+        } */
+        .onTop {
+        position: absolute;
+        /* background-image: url('./karina.jpg'); */
+        background: black;
+        left: 0%;
+        width: 0%;
+        height: 100%;
+        /* z-index:1; */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <div class="left"></div> -->
+    <div class="onTop"></div>
+
+
+     <script>
+        // TweenMax.to('.left', 2, {
+        //     delay: .8,
+        //     width: '100%',
+        //     ease: Power2.easeInOut
+        // })
+        TweenMax.to('.onTop', 2, {
+            delay: .16,
+            width: '100%',
+            ease: Power2.easeInOut
+        })
+     </script>
+    
+</body>
+</html>

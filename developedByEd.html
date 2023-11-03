@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developed By Ed</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .slider{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to left, #d2d7dd, #7c7976);
+            z-index: -1;
+        }
+
+        nav{
+            display: grid;
+            grid-template-columns: 10% 1fr 1fr 10%;
+            min-height: 10vh;
+            color: white;
+            align-items: center;
+        }
+
+        #logo{
+            grid-column: 2/3;
+            font-size: 24px;
+        }
+
+        nav img{
+            width: 40px;
+            height: 30px;
+            border-radius: 50%;
+            justify-self: end;
+        }
+
+        section {
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+            /* background: lightblue; */
+        }
+
+        .hero{
+            height: 80%;
+            width: 100%;
+            position: relative;
+        }
+
+        .hero img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .headline{
+            position: absolute;
+            top: 70%;
+            left: 10%;
+            font-size: 100px;
+            color: white;
+            transform: translate(-20%, -70%);
+            /* z-index: 3; */
+        }
+
+        /* .hero::after{
+            content: "";
+            background: black;
+            width: 100%;
+            height: 80%;
+            position: absolute;
+            left: 0;
+            top: 10%;
+            opacity: 0.3;
+        } */
+
+    </style>
+</head>
+<body>
+    
+    
+    <header>
+        <nav>
+            <h3 id="logo">Kirti</h3>
+            <img class="profile" src="./photographyPortfolio/profile.jpg" alt="">
+        </nav>
+        <section>
+            <div class="hero">
+                <img src="./photographyPortfolio/karina.jpg" alt="">
+                <h1 class="headline">Dream BIG</h1>
+            </div>
+        </section>
+    </header>
+    
+
+
+    <div class="slider">
+        
+    </div>
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+
+        const hero = document.querySelector(".hero");
+        const slider = document.querySelector(".slider");
+        const logo = document.querySelector("#logo");
+        const profile = document.querySelector(".profile");
+        const headline = document.querySelector(".headline");
+
+        const t1= new gsap.timeline();
+
+        t1.fromTo(hero, 1, {height : "0%"}, {height : "80%", ease: Power2.easeInOut})
+        .fromTo(hero, 1.2, {width : "100%"},  {width : "80%", ease: Power2.easeInOut})
+        .fromTo(slider, 1.2, {x: "-100%"}, {x:"0%", ease: Power2.easeInOut}, "-=1.2")
+        .fromTo(logo, 0.5, {opacity: 0, x : 30}, { opacity: 1, x : 0}, "-=0.5")
+        .fromTo(profile, 0.5, {opacity: 0, x : -30}, { opacity: 1, x : 0}, "-=0.5")
+
+    </script>
+    
+</body>
+</html>

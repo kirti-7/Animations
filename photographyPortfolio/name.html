@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            }
+            .container{
+                display: flex;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 90px;
+                text-transform: uppercase;
+                color: transparent;
+                width: 300px;
+                height: 200px;
+                /* background: rebeccapurple; */
+            }
+        /* .name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 90px;
+            text-transform: uppercase;
+            color: transparent;
+             -webkit-text-stroke: 2px red; 
+            } 
+            */
+        .nameA{
+            -webkit-text-stroke: 2px red;
+        }
+        .nameL{
+            -webkit-text-stroke: 2px green;
+        }
+        .nameP{
+            -webkit-text-stroke: 2px black;
+        }
+        .nameH{
+            -webkit-text-stroke: 2px blue;
+        }
+        .nameAlast{
+            -webkit-text-stroke: 2px blueviolet;
+        }
+
+        .onTop {
+        position: absolute;
+        /* background-image: url('./karina.jpg'); */
+        background: red;
+        right: 40%;
+        top: 38%;
+        width: 350px;
+        height: 200px;
+        z-index:1;
+        }
+
+
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="nameA name">A </div>
+       <div class="nameL name">L </div>
+       <div class="nameP name">P </div>
+       <div class="nameH name">H </div>
+       <div class="nameAlast name">A </div>
+    </div>
+    <div class="onTop">
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+   <script>
+    TweenMax.to('.onTop', 2, {
+            delay: .16,
+            width: '0%',
+            ease: Power2.easeInOut,
+            // repeat: -1
+        })
+   </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .container{
+            /* background-image: url('./photographyPortfolio/profile.jpg'); */
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .first{
+            background: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100vh;
+            transition: all 3s ease-in-out;
+            animation: go_left 3s cubic-bezier(0.5, 0.8, 0.08, 1);
+        }
+        .second{
+            background: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10%;
+            height: 100vh;
+        }
+
+
+        @keyframes go_left {
+            0%{
+                left: -100%;
+                width: 0;
+            }
+            50%{
+                left: 0;
+                width: 100%;
+            }
+            100%{
+                left: 25%;
+                width: 100%;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+    </div>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        const t1= new gsap.timeline();
+        t1.fromto('.first', 1, {left: "0%", width: "0%"}, )
+    </script>  -->
+    
+</body>
+</html>

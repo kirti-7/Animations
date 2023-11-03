@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequential Line Animations with Full-Width Container</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .full-width-container {
+            width: 100%;
+            height: 2px; /* Adjust height as needed */
+            background-color: green;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .line {
+            flex: 0 0 auto;
+            width: 0;
+            height: 100%;
+            background-color: green;
+            transition: width 3s linear;
+        }
+
+        /* Adjust the animation delay for each line */
+        .line:nth-child(1) {
+            animation: animate 3s linear 0s forwards;
+        }
+
+        .line:nth-child(2) {
+            animation: animate 3s linear 3s forwards;
+        }
+
+        .line:nth-child(3) {
+            animation: animate 3s linear 6s forwards;
+        }
+
+        /* Add more lines and adjust their delay as needed */
+    </style>
+</head>
+<body>
+    <div class="full-width-container">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <!-- Add more lines as needed -->
+    </div>
+
+    <script>
+        // JavaScript is not required for this example as the animations are controlled by CSS
+    </script>
+</body>
+</html>

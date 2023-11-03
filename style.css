@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.container{
+			position: relative;
+			top: 150px;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: kirti 3s 0.3s ease-in;
+    /* transition: left 0.3s ease-in-out; */
+}
+
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: kirti2 3s 0.3s ease-in;
+    /* transition: left 0.3s ease-in-out; */
+    
+}
+
+
+.line{
+    width: 1px;
+    height: 1px;
+    background-color: blueviolet;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: line 3s linear ease-in;
+    /* transition: left 0.3s ease-in-out; */
+    /* transform-origin:  left center;; */
+}
+
+.expandingLine{
+    height: 1px;
+    background-color: blueviolet;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: expandingLine 4s 5s infinite linear;
+}
+@keyframes expandingLine{
+			0%{
+				width: 0%;
+			}
+			100%{
+        width: 95%;
+      }
+    }
+@keyframes kirti {
+  0% {
+    /* Styles at the start of the animation */
+    left: 50%;
+  }
+  50%,100% {
+    /* Styles at the middle of the animation */
+    left: 5%;
+    top: 5%;
+    width: 50px;
+    height: 20px;
+    border-radius: 7%;
+  }
+  /* 100% {
+    Styles at the end of the animation
+    left: 80%;
+  } */
+}
+
+
+@keyframes kirti2 {
+  0% {
+    /* Styles at the start of the animation */
+    left: 110%;
+    opacity: 0;
+  }
+  50%,100% {
+    /* Styles at the middle of the animation */
+    left: 80%;
+    top: 80%;
+    /* width: 50px;
+    height: 20px; */
+    border-radius: 50%;
+    opacity: 1;
+  }
+  /* 100% {
+    Styles at the end of the animation
+    left: 80%;
+  } */
+}
+
+@keyframes line {
+  0% {
+    /* Styles at the start of the animation */
+    left: 0;
+    /* opacity: 0; */
+  }
+  50%,100% {
+    /* Styles at the middle of the animation */
+    /* left: 80%;
+    top: 80%; */
+    left: 300px;
+    /* height: 20px; */
+    /* border-radius: 50%; */
+    /* opacity: 1; */
+  }
+  /* 100% {
+    Styles at the end of the animation
+    left: 80%;
+  } */
+}

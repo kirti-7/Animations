@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .container{
+			position: relative;
+			top: 150px;
+		}
+        .line1{
+            position: absolute;
+			left: 0;
+			height: 1px;
+			background: #5500AA;
+			animation: lineH 4s linear;
+            transform: scaleX(1.5);
+        }
+
+        @keyframes lineH{
+			0%{
+				width: 0%;
+			}
+			100%{
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="line1">
+
+        </div>
+    </div>
+    
+</body>
+</html>
